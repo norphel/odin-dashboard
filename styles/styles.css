@@ -1,0 +1,20 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "sidebar header"
+                         "sidebar main";
+}
+header {
+    grid-area: header;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: #1992D4;
+}
+main {
+    grid-area: main;
+    background-color: #E2E8F0;
+}
