@@ -1,19 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    font-family: 'Roboto', 'sans-serif';
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
     grid-template-areas: "sidebar header"
                          "sidebar main";
 }
+
+/********** Header Styles **********/
 header {
     grid-area: header;
 }
+
+/********** Sidebar Styles **********/
 .sidebar {
     grid-area: sidebar;
     background-color: #1992D4;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
+.sidebar > div > div {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 1rem;
+    padding-left: 0.5rem;
+    color: #FFF;
+    font-weight: bold;
+}
+.sidebar > div > div > img {
+    justify-self: center;
+}
+
+/********** Main Content Styles **********/
 main {
     grid-area: main;
     background-color: #E2E8F0;
