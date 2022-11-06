@@ -14,6 +14,55 @@ body {
 /********** Header Styles **********/
 header {
     grid-area: header;
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+header > div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0.5rem 1.5rem;
+}
+header > div > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+header > div:first-child > div > button {
+    background: none;
+    border: none;
+    align-self: center;
+}
+header > div > div > input {
+    border-radius: 20px;
+    border: none;
+    background-color: #E2E8F0;
+    height: 1.7rem;
+    width: 80%;
+}
+img[alt="profile picture"] {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+header > div:first-child > div:last-child {
+    margin-left: 1rem;
+}
+header > div:last-child > div:first-child > div > h2,
+header > div:last-child > div:first-child > div > p {
+    margin: 2px;
+    font-weight: bold;
+}
+header > div:last-child > div > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+header > div:last-child > div > button {
+    border: none;
+    background-color: #1992D4;
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
 }
 
 /********** Sidebar Styles **********/
