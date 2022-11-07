@@ -5,8 +5,8 @@ body {
     min-height: 100vh;
     font-family: 'Roboto', 'sans-serif';
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: "sidebar header"
                          "sidebar main";
 }
@@ -91,4 +91,43 @@ header > div:last-child > div > button {
 main {
     grid-area: main;
     background-color: #E2E8F0;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "Projects Announcement"
+                         "Projects Trending";
+    gap: 1rem;
+}
+main > div:first-child {
+    grid-area: Projects;
+}
+main > div:nth-child(2) {
+    grid-area: Announcement;
+}
+main > div:last-child {
+    grid-area: Trending;
+}
+main > div:first-child > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+}
+main > div:first-child > div > div {
+    background-color: #FFF;
+    border-radius: 10px;
+    border-left: 10px solid #F0B429;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+}
+main > div:first-child > div > div > p {
+    padding-right: 5rem;
+    color: #757474;;
+}
+main > div:first-child > div > div > div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
 }
