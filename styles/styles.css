@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     font-family: 'Roboto', 'sans-serif';
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: "sidebar header"
                          "sidebar main";
@@ -91,7 +91,7 @@ header > div:last-child > div > button {
 main {
     grid-area: main;
     background-color: #E2E8F0;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -108,17 +108,22 @@ main > div:nth-child(2) {
 main > div:last-child {
     grid-area: Trending;
 }
+main > div {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
 main > div:first-child > div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
+    align-self: stretch;
 }
 main > div:first-child > div > div {
     background-color: #FFF;
     border-radius: 10px;
     border-left: 10px solid #F0B429;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    padding: 1rem;
+    padding: 2rem 3rem;
     display: grid;
     grid-template-rows: 30px 1fr 30px;
 }
@@ -130,4 +135,36 @@ main > div:first-child > div > div > div {
     display: flex;
     justify-content: flex-end;
     gap: 1.5rem;
+}
+main > div:nth-child(2) > div,
+main > div:last-child > div {
+    background-color: #FFF;
+    padding: 2rem; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main > div:nth-child(2) > div > div > h5 {
+    margin: 0;
+    font-size: 1rem;
+}
+main > div:nth-child(2) > div > div > p {
+    margin-top: 5px;
+    color: #757474;
+}
+main > div:last-child > div > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+main > div:last-child > div > div > div > p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+main > div:last-child > div > div > div > p:last-child {
+    margin-top: 0;
+    color: #757474;
 }
